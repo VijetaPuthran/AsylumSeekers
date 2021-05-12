@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Refugee Data Visualizations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body style="background: url('Refugee.jpg');">
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Refugee Data
+            <!-- <img class="nav-ref" src="Images/Refugee.jpg"> -->
+          </a>
+          <div style="float:right"><button class='pull-right' style='font-size:24px;'>GeoMap<i class='fas fa-globe'></i></button></div>
+          
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>Refugee Data</h1>
+      <p>Around the World</p>
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2"  style="margin-top: 60px; position: fixed; z-index: 1030;">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date">Year</label>
+                        <select id="selDataset" onchange="optionChanged(this.value)" style="color: black;"></select>
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+          <div id="mf_bar" style="opacity: 75%;"></div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-md-offset-2 col-md-10" >
+          <div id="bubble" style="opacity: 75%;"></div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 50px;;">
+        <div class="col-md-offset-2 col-md-10">
+          <div id="top_bar" style="opacity: 75%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!-- <div class="col-md-2"></div>
+          <div id="mf_bar"></div>
+        </div> -->
+        <!-- <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <footer class="footer">
+      <span class="bottom">Refugee World Data</span>
+    </footer>
+  </div>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="js/data.js"></script>
+  <script src="js/app.js"></script> -->
+  <script src="../static/js/plots.js"></script>
+  <!-- <script src="/app.py"></script> -->
+  <!-- <script src="localhost/api/demographics"></script> -->
+</body>
+
+</html>
