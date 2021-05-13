@@ -11,9 +11,13 @@ body {
   
 }
 
-body{
-  background-image: url("Refugee.jpg");
-}
+/* body{
+  background: url(Refugee.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
 
 /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
 .wrapper {
