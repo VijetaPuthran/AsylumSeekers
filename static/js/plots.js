@@ -34,7 +34,9 @@ function build_mfChart() {
     ];
 
     var barLayout = {
-      title: "Top 25 Host Countries for Past 5 Years",
+      title: "Top Host Countries",
+      yaxis: {title:"Total number of people"},
+      xaxis: {title: "Country"},
       margin: { t: 30, l: 150 }
     };
 
@@ -71,6 +73,8 @@ function buildCharts(sample) {
 
     var barLayout = {
       title: "Total Asylum Seekers by Year",
+      xaxis: {title:"Total number of people"},
+      yaxis: {title: "Country"},
       margin: { t: 30, l: 150 }
     };
 
@@ -81,8 +85,6 @@ function buildCharts(sample) {
 
   d3.csv("/demographics.csv").then((data) => {
 
-    // var resultArray = data.results;
-    // userInfo = data.user;
 
     var mf_year = data.map(info => info.year);
     var m_total = data.filter(object => object.year == sample).map(info => info.m_total);
@@ -91,11 +93,11 @@ function buildCharts(sample) {
 
     // Build a Bubble Chart
     var bubbleLayout = {
-      title: "Male vs Female",
+      title: "Total Asylum Seekers by Year",
       margin: { t: 0 },
       hovermode: "closest",
-      xaxis: { title: "Country" },
-      yaxis: { title: "Number of People"},
+      xaxis: { title: "Total number of people" },
+      yaxis: { title: "Country"},
       margin: { t: 30}
     };
     var bubbleData = [
@@ -106,27 +108,16 @@ function buildCharts(sample) {
         mode: "markers",
         marker: {
           size: m_total  / 1000000,
-          // color: m_total,
-          //sizeref=2.*max(m_total)/(40.**2),
           colorscale: "Earth"
         }
-      //   marker: dict(
-      //     size= m_total,
-      //     sizemode='area',
-      //     sizeref=2.*max(m_total)/(40.**2),
-      //     sizemin=4
-      // )
+
       }
     ];
 
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
   })
-  
-
-
 
 }
-
 
 // // Dropdown function 
 function init() {
@@ -146,6 +137,10 @@ function init() {
     .sort(d3.ascending);
   });
 
+  
+
+  
+
   build_mfChart();
 }
 
@@ -157,3 +152,4 @@ function optionChanged(newSample) {
 
 // // Initialize the dashboard
 init();
+

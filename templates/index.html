@@ -8,10 +8,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  
   <!-- <link href="../css/style.css" rel="stylesheet"> -->
 </head>
 
-<body style="background-image: url('Refugee.jpg');">
+<body style="background-image: url('Refugee.jpg');font-family: 'Trirong', serif';">
   <div class="wrapper">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -27,30 +30,22 @@
         </div>
       </div>
     </nav>
-    <div class="hero text-center">
-      <h1>Refugee Data</h1>
-      <p>Around the World</p>
-    </div>
+    <!-- <div class="hero text-center" >
+      
+    </div> -->
     <div class="container">
+      <div class="row" style="background-color: #008080;margin-bottom:20px;opacity:0.5;">
+        <div class="hero text-center">
+          <p><h1>Refugee Data</h1></p>
+          <h3 style="text-decoration: underline;">Around the World</h3>
+          <h4> Every human being deserves a life free from persecution and discrimination. For over half a century, UNHCR has helped millions of people to restart their lives. They include refugees, returnees, stateless people, the internally displaced and asylum-seekers.</h4>
+          <h4>The dataset includes data on millions of people over the years seeking a safe place to live. This is used to prepare for future needs in terms of supplies and planning the expenses in case of adversities like war or other calamities. The data was analyzed to arrive at the countries that opened their doors to asylumseekers over the years. The dataset analyzes data between 2001 and 2016. </h4>
+        </div>
+      </div>
       <div class="row margin-top-50">
-        <div class="col-md-2"  style="margin-top: 60px; position: fixed; z-index: 1030;">
-          <aside class="filters">
-            <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
-              <div class="panel-body">
-                <form>
-                  <div class="form-group">
-                    <ul class="list-group" id="filters">
-                      <li class="filter list-group-item">
-                        <label for="date">Year</label>
-                        <select id="selDataset" onchange="optionChanged(this.value)" style="color: black;"></select>
-                      </li>
-                    </ul>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </aside>
+        <div class="col-md-2"  style="margin-top: 60px; position: fixed; z-index: 1030;background-color:#008080;opacity:0.5;width:10%;">
+          <label for="date"><h4>Year</h4></label>
+          <select id="selDataset" onchange="optionChanged(this.value)" style="color: black;"></select>
         </div>
         <div class="col-md-offset-2 col-md-10">
           <div id="mf_bar" style="opacity: 75%;"></div>
@@ -100,6 +95,7 @@
   <!-- <script src="js/data.js"></script>
   <script src="js/app.js"></script> -->
   <script src="../static/js/plots.js"></script>
+  
   <!-- <script src="/app.py"></script> -->
   <!-- <script src="localhost/api/demographics"></script> -->
 </body>

@@ -69,7 +69,7 @@ legend.onAdd = function() {
   colors = [];
 
 //Adding the range for colors and value
-  div.innerHTML += "<h4 style='margin:4px'>Range</h4>"
+  div.innerHTML += "<h4 style='margin:4px'>Total number of people</h4>"
 
   for (var i = 0; i < value.length; i++) {
       div.innerHTML += "<i style='background: " + color(value[i] +1) + "'></i> " +
